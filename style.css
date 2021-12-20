@@ -1,41 +1,51 @@
-/* Fontawesome 4.7 */
-@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+/* Google Web Fonts */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
 
-/* Google Web Fonts CDN */
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
 
 body {
-  font-family: 'Noto Sans KR', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  /* font-size: 16px; */
+  margin: 0;
 }
-.star-rating {
-  background-color: #333;
-  width: 250px;
-  text-align: center;
-  border-radius: 5px;
-  padding: 5px;
+.navi {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 100;
 }
-.star-rating div {
-  float: left;
-  width: 50%;
-}
-.stars {}
-.stars .fa {
-  font-size: 18px;
-  cursor: pointer;
-}
-.stars .fa.active {
-  color: yellow;
-  text-shadow: 0 0 5px yellow;
-}
-.print {
+.navi li {}
+.navi li a {
+  font-size: 4em;
+  text-decoration: none;
   color: #fff;
+  position: relative;
 }
-.print img {
-  vertical-align: middle;
-  margin-right: 5px;
+.navi li a:before {
+  position: absolute;
+  color: #58D3F7;
+  top: 0;
+  left: 0;
+  width: 0;
+  overflow: hidden;
+  content: attr(data-text);
+  transition: 0.5s;
+}
+.navi li a:hover:before {
+  width: 100%;
+}
+
+.photo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url(https://cdn.pixabay.com/photo/2016/11/23/13/48/beach-1852945_1280.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  transition: 0.5s;
 }
