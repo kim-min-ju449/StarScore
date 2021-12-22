@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .icon{
+            
+            height:125px;
+            width:125px;
+            margin:10px;
+            position: relative;
+            
+        }
+        a{
+            color:#222;
+            text-decoration: none;
+        }
+        .icon span{
+           position:absolute;
+           background-color:#000;
+           color:#fff;
+           width:200px;
+           text-align:center;
+           padding:10px;
+           border-radius:5px;
+           top:-80px;
+           transform:translateX(-50%);
+           /*display:none;*/
+           opacity: 0;
+           transition: 0.5s;
+        }
+        .icon span:after{
+            content:'';
+            position:absolute;
+            background-color: #000;
+            width:10px;
+            height:10px;
+            transform:rotate(45deg) translateX(-50%);
+            bottom: -5px; /*height가 10이기 때문에 그것에 반인 5를 넣는다 반대일때도 같은 개념*/
+        }
+        .icon:hover span{ 
+            /*display:block;*/
+            opacity: 1;
+        }
+        .container{
+            text-align: center;
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            height:100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">
+            <img src="https://cdn.pixabay.com/photo/2018/02/24/10/02/apple-3177692_1280.png" width="150px" height="150px">
+            <span>난 뭘까?</span>
+        </div>
+        <div class="icon">
+                <img src="https://cdn.pixabay.com/photo/2018/02/24/10/02/apple-3177692_1280.png" width="150px" height="150px">
+                <span>난 먹는거니?</span>
+            </div>
+            <div class="icon">
+                    <img src="https://cdn.pixabay.com/photo/2018/02/24/10/02/apple-3177692_1280.png" width="150px" height="150px">
+                    <span>난 그림이니?</span>
+                </div>
+                <div class="icon">
+                        <img src="https://cdn.pixabay.com/photo/2018/02/24/10/02/apple-3177692_1280.png" width="150px" height="150px">
+                        <span>난 뭐하는 얘고 왜 여기 있는지좀</span>
+                    </div>
+
+    </div>
+
+</body>
+</html>
